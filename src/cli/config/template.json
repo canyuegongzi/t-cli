@@ -1,0 +1,10 @@
+{
+  "templateList": [
+    {
+      "name": "node-nest",
+      "type": "node",
+      "url": "",
+      "description": "nest模板"
+    }
+  ]
+}

@@ -1,20 +1,30 @@
 #!/usr/bin/env node
 const program = require('commander')
-console.log('这是测试1');
-var inquirer = require('inquirer')
-/*inquirer.prompt([
-    {
-        type: 'confirm',
-        name: 'test',
-        message: '请选择工程类型?',
-        default: true
-    }
-]).then((answers) => {
-    console.log('结果为:')
-    console.log(answers)
-})*/
-
 
 program
-    .version(`@t/cli ${require('../../../package').version}`)
+    .version(`@canyuegongzi/t-cli ${require('../../../package').version}`)
     .usage('<command> [options]')
+
+program
+    .command('init <app-name>')
+    .description('初始化一个工程')
+    .option('-c, --category <category>', '工程类型,[web | server]')
+    .option('-t, --template <template>', '模板名称')
+    .action((name, options) => {
+        require('../lib/init')(name, options)
+    })
+
+program
+    .command('list')
+    .description('列出项目模板')
+    .option('-c, --category <category>', '工程类型,[web | server]')
+    .action((options) => {
+        console.log(options);
+        require('../lib/list')(options)
+    })
+
+program.on('command:*', function () {
+    console.log('Invalid command: %s\nSee --help for a list of available commands.', program.args.join(' '));
+    process.exit(1);
+})
+program.parse(process.argv);
