@@ -2,8 +2,8 @@
   "templateList": [
     {
       "name": "node-nest",
-      "type": "node",
-      "url": "direct:https://github.com/canyuegongzi/t-cli.git#master",
+      "type": "server",
+      "url": "direct:https://github.com/canyuegongzi/t-cli-template.git#node-nest",
       "description": "nest模板"
     },
     {

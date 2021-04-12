@@ -31,7 +31,7 @@ async function init (pluginToAdd, options = {}, context = process.cwd()) {
     }
     const {url} = templateInfo;
     console.log(url)
-    const isSuccess = downloadFile(url, projectName, downloadSuccess )
+    const isSuccess = await downloadFile(url, projectName, downloadSuccess )
 }
 
 /**
