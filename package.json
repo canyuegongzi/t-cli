@@ -23,7 +23,8 @@
     "commander": "^7.2.0",
     "download-git-repo": "^3.0.2",
     "inquirer": "^8.0.0",
-    "ora": "^5.4.0"
+    "ora": "^5.4.0",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",

@@ -3,8 +3,14 @@
     {
       "name": "node-nest",
       "type": "node",
-      "url": "",
+      "url": "direct:https://github.com/canyuegongzi/t-cli.git#master",
       "description": "nest模板"
+    },
+    {
+      "name": "web-typescript",
+      "type": "web",
+      "url": "direct:https://github.com/canyuegongzi/t-cli.git#master",
+      "description": "web端typescript模板"
     }
   ]
 }
