@@ -14,10 +14,10 @@ async function list (options = {}, context = process.cwd()) {
         templateLogList = templateList.filter(item => item.type === projectCategory);
     }
     for (let i = 0; i < templateLogList.length; i ++) {
-        log('success', `${templateLogList[i].name}:${templateLogList[i].description}`);
+        log('SUCCESS', `${templateLogList[i].name}:${templateLogList[i].description}`);
     }
     if (!templateLogList.length) {
-        log('waring', 'no template');
+        log('WARING', 'no template');
     }
 }
 module.exports = (...args) => {

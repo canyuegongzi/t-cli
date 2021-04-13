@@ -3,13 +3,19 @@
     {
       "name": "node-nest",
       "type": "server",
-      "url": "direct:https://github.com/canyuegongzi/t-cli-template.git#node-nest",
+      "url": [
+        "direct:https://gitee.com/canyuegongzi/t-cli-templatt-cli-templatee.git#node-nest",
+        "direct:https://github.com/canyuegongzi/t-cli-template.git#node-nest"
+      ],
       "description": "nest模板"
     },
     {
       "name": "web-typescript",
       "type": "web",
-      "url": "direct:https://github.com/canyuegongzi/t-cli.git#master",
+      "url": [
+        "direct:https://gitee.com/canyuegongzi/t-cli-templatt-cli-templatee.git#web-webpack4-typescript",
+        "direct:https://github.com/canyuegongzi/t-cli.git#web-webpack4-typescript"
+      ],
       "description": "web端typescript模板"
     }
   ]
