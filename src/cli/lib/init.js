@@ -66,17 +66,22 @@ async function selectCategory() {
  * @returns {Promise<void>}
  */
 async function selectTemplate(projectCategory) {
-    const list = templateList.filter(item => item.type === projectCategory).map((item) => item.name)
-    if (!list.length) {
-        return log('WARING', 'no template');
-    }
-    return new Promise(resolve => {
-        inquirer.prompt([
-            { type: 'list', message: 'please select template:', name: template, choices: list }
-        ]).then((answers) => {
-            resolve(answers[template])
+    try {
+        const list = templateList.filter(item => item.type === projectCategory).map((item) => item.name)
+        if (!list.length || !list) {
+            return log('WARING', 'no template');
+        }
+        return new Promise(resolve => {
+            inquirer.prompt([
+                { type: 'list', message: 'please select template:', name: template, choices: list }
+            ]).then((answers) => {
+                resolve(answers[template])
+            })
         })
-    })
+    }catch (e){
+        log('ERROR', e);
+    }
+
 }
 
 /**

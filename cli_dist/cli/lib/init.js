@@ -223,20 +223,21 @@ function _selectTemplate() {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
+            _context3.prev = 0;
             list = templateList.filter(function (item) {
               return item.type === projectCategory;
             }).map(function (item) {
               return item.name;
             });
 
-            if (list.length) {
-              _context3.next = 3;
+            if (!(!list.length || !list)) {
+              _context3.next = 4;
               break;
             }
 
             return _context3.abrupt("return", log('WARING', 'no template'));
 
-          case 3:
+          case 4:
             return _context3.abrupt("return", new Promise(function (resolve) {
               inquirer.prompt([{
                 type: 'list',
@@ -248,12 +249,17 @@ function _selectTemplate() {
               });
             }));
 
-          case 4:
+          case 7:
+            _context3.prev = 7;
+            _context3.t0 = _context3["catch"](0);
+            log('ERROR', _context3.t0);
+
+          case 10:
           case "end":
             return _context3.stop();
         }
       }
-    }, _callee3);
+    }, _callee3, null, [[0, 7]]);
   }));
   return _selectTemplate.apply(this, arguments);
 }

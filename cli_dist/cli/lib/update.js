@@ -109,10 +109,9 @@ function _update() {
                             resolve(false);
                           }
 
-                          var packageFile = {
+                          fs.writeFile(path.join(__dirname, '../config/', 'category.json'), JSON.stringify({
                             categoryList: configData.categoryList
-                          };
-                          fs.writeFile(path.join(__dirname, '../config/', 'category.json'), JSON.stringify(packageFile, null, 4), 'utf8', function (err) {
+                          }, null, 4), 'utf8', function (err) {
                             if (err) {
                               errorCallback(err);
                               resolve(false);
@@ -124,10 +123,9 @@ function _update() {
                                 resolve(false);
                               }
 
-                              var packageFile = {
-                                categoryList: configData.templateList
-                              };
-                              fs.writeFile(path.join(__dirname, '../config/', 'template.json'), JSON.stringify(packageFile, null, 4), 'utf8', function (err) {
+                              fs.writeFile(path.join(__dirname, '../config/', 'template.json'), JSON.stringify({
+                                templateList: configData.templateList
+                              }, null, 4), 'utf8', function (err) {
                                 if (err) {
                                   errorCallback(err);
                                   resolve(false);

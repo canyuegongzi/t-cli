@@ -46,8 +46,7 @@ async function update(data) {
                errorCallback(err);
                resolve(false);
            }
-           const packageFile = {categoryList: configData.categoryList};
-           fs.writeFile(path.join(__dirname, '../config/', 'category.json'), JSON.stringify(packageFile, null, 4), 'utf8', (err) => {
+           fs.writeFile(path.join(__dirname, '../config/', 'category.json'), JSON.stringify({categoryList: configData.categoryList}, null, 4), 'utf8', (err) => {
                if (err) {
                    errorCallback(err);
                    resolve(false);
@@ -57,8 +56,7 @@ async function update(data) {
                        errorCallback(err);
                        resolve(false);
                    }
-                   const packageFile = {categoryList: configData.templateList};
-                   fs.writeFile(path.join(__dirname, '../config/', 'template.json'), JSON.stringify(packageFile, null, 4), 'utf8', (err) => {
+                   fs.writeFile(path.join(__dirname, '../config/', 'template.json'), JSON.stringify({templateList: configData.templateList}, null, 4), 'utf8', (err) => {
                        if (err) {
                            errorCallback(err);
                            resolve(false);

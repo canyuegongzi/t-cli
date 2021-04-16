@@ -1,5 +1,5 @@
 {
-    "categoryList": [
+    "templateList": [
         {
             "name": "node-nest",
             "type": "server",
