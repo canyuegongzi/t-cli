@@ -1,10 +1,9 @@
 {
   "name": "@canyuegongzi/t-cli",
-  "version": "1.1.3",
+  "version": "1.1.8",
   "description": "",
   "bin": {
-    "t": "npm/cli/bin/t.js",
-    "t-dev": "src/cli/bin/t.js"
+    "t": "cli_dist/cli/bin/t.js"
   },
   "scripts": {
     "build": "gulp default"
@@ -32,16 +31,18 @@
     "download-git-repo": "^3.0.2",
     "inquirer": "^8.0.0",
     "ora": "^5.4.0",
-    "rimraf": "^3.0.2"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.13.14",
+    "rimraf": "^3.0.2",
     "@babel/core": "^7.13.15",
     "@babel/plugin-transform-runtime": "^7.13.15",
     "@babel/preset-env": "^7.13.15",
-    "@babel/runtime": "^7.13.10",
+    "@babel/runtime": "^7.13.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "fs-readdir-recursive": "^1.1.0",
     "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0"
+    "gulp-babel": "^8.0.0",
+    "mocha": "^8.3.2"
   },
   "engines": {
     "node": "^12.0.0 || >= 14.0.0"
