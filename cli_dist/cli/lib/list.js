@@ -29,6 +29,7 @@ function _list() {
         projectCategory,
         templateLogList,
         i,
+        str,
         _args = arguments;
     return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) {
@@ -45,8 +46,9 @@ function _list() {
               });
             }
 
-            for (i = 0; i < templateLogList.length; i++) {
-              log('SUCCESS', "".concat(templateLogList[i].name, ":").concat(templateLogList[i].description));
+            for (i = 0; i <= templateLogList.length; i++) {
+              str = "".concat(templateLogList[i].name, ":").concat(templateLogList[i].description);
+              log('SUCCESS', str);
             }
 
             if (!templateLogList.length) {

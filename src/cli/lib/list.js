@@ -13,8 +13,9 @@ async function list (options = {}, context = process.cwd()) {
     if (projectCategory){
         templateLogList = templateList.filter(item => item.type === projectCategory);
     }
-    for (let i = 0; i < templateLogList.length; i ++) {
-        log('SUCCESS', `${templateLogList[i].name}:${templateLogList[i].description}`);
+    for (let i = 0; i <= templateLogList.length; i ++) {
+        const str = `${templateLogList[i].name}:${templateLogList[i].description}`;
+        log('SUCCESS', str );
     }
     if (!templateLogList.length) {
         log('WARING', 'no template');

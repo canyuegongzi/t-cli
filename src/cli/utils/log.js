@@ -6,7 +6,4 @@
 function log(type, str) {
     console.log(str);
 }
-
-module.exports = (...args) => {
-    return log(...args).catch(err => {})
-}
+module.exports = log;
