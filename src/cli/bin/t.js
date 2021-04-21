@@ -23,6 +23,14 @@ program
     })
 
 program
+    .command('query')
+    .description('模板查询')
+    .option('-s, --querystring <querystring>', '模板查询')
+    .action((options) => {
+        require('../lib/query')(options)
+    })
+
+program
     .command('update')
     .description('更新配置')
     .option('-t, --type <type>', '更新类型,[config]')

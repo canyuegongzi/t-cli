@@ -34,12 +34,12 @@
     "commander": "^7.2.0",
     "download-git-repo": "^3.0.2",
     "inquirer": "^8.0.0",
-    "ora": "^5.4.0",
-    "rimraf": "^3.0.2"
+    "ora": "^5.4.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",
     "fs-readdir-recursive": "^1.1.0",
+    "rimraf": "^3.0.2",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "mocha": "^8.3.2"

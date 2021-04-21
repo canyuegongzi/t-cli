@@ -1,7 +1,7 @@
-var assert = require('assert')
-var download = require('..')
-var read = require('fs-readdir-recursive')
-var rm = require('rimraf').sync
+const assert = require('assert')
+const download = require('..')
+const read = require('fs-readdir-recursive')
+const rm = require('rimraf').sync
 
 describe('download-git-repo', function () {
     this.timeout(20000)
