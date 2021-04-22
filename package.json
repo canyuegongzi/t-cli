@@ -1,9 +1,9 @@
 {
   "name": "@canyuegongzi/t-cli",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "description": "",
   "bin": {
-    "t": "cli_dist/cli/bin/t.js"
+    "t": "src/cli/bin/t.js"
   },
   "scripts": {
     "build": "gulp default"

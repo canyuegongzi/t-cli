@@ -18,16 +18,9 @@ program
     .command('list')
     .description('列出项目模板')
     .option('-c, --category <category>', '工程类型,[web | server]')
+    .option('-q, --query <query>', '查询字符串')
     .action((options) => {
         require('../lib/list')(options)
-    })
-
-program
-    .command('query')
-    .description('模板查询')
-    .option('-s, --querystring <querystring>', '模板查询')
-    .action((options) => {
-        require('../lib/query')(options)
     })
 
 program
