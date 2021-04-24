@@ -11,7 +11,7 @@ const log = require('./log');
  */
 async function downloadFile(url, name, target = process.cwd()) {
     return new Promise((resolve, reject) => {
-        const dir = path.join(process.cwd(), name);
+        const dir = path.join(target, name);
         rimraf.sync(dir, {});
         const downLoadCallback = (err) => {
             if (err) {

@@ -1,12 +1,13 @@
 {
   "name": "@canyuegongzi/t-cli",
-  "version": "1.2.3",
-  "description": "",
+  "version": "1.2.4",
+  "description": "快速构建前后端开发环境脚手架，欢迎提供优秀的工程模板。",
   "bin": {
-    "t": "src/cli/bin/t.js"
+    "t": "cli_dist/cli/bin/t.js"
   },
   "scripts": {
-    "build": "gulp default"
+    "build": "gulp default",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -39,10 +40,11 @@
   "devDependencies": {
     "@babel/cli": "^7.13.14",
     "fs-readdir-recursive": "^1.1.0",
-    "rimraf": "^3.0.2",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "mocha": "^8.3.2"
+    "jest": "^26.6.3",
+    "mocha": "^8.3.2",
+    "rimraf": "^3.0.2"
   },
   "engines": {
     "node": "^12.0.0 || >= 14.0.0"

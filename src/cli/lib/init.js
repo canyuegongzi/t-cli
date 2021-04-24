@@ -7,6 +7,7 @@ const ora = require('ora');
 const downloadFile = require("../utils/download");
 const template = 'template';
 const category = 'category';
+const isTest = process.env.NODE_ENV;
 /**
  * 初始化工程模板
  * @param pluginToAdd
@@ -31,7 +32,7 @@ async function init (pluginToAdd, options = {}, context = process.cwd()) {
     const {url} = templateInfo;
     const packageInfo = await getUserInputPackageMessage(projectName);
     const downloadSpinner = ora({ text: 'start download template...', color: 'blue'}).start();
-    const {dir, name, flag} = await downloadFile(url[0], projectName)
+    const {dir, name, flag} = await downloadFile(url[0], projectName, context)
     if (flag) {
         downloadSpinner.succeed('download success');
         const editConfigSpinner = ora({ text: 'start edit config...', color: 'blue'}).start();
@@ -56,6 +57,7 @@ async function selectCategory() {
         inquirer.prompt([
             { type: 'list', message: 'please select category:', name: category, choices: categoryList }
         ]).then((answers) => {
+            console.log(answers);
             resolve(answers[category])
         })
     })
@@ -115,6 +117,9 @@ async function downloadSuccess(dir, name, packageInfo) {
  */
 async function getUserInputPackageMessage(name) {
     return new Promise(async (resolve, reject) => {
+        if(isTest) {
+            return resolve({name, author: '', description: '', version: '1.0.0' })
+        }
         try {
             const messageInfoList = await Promise.all([
                 inquirer.prompt([
@@ -129,6 +134,8 @@ async function getUserInputPackageMessage(name) {
         }
     })
 }
-module.exports = (...args) => {
-    return init(...args).catch(err => {})
+module.exports = {
+    create: (...args) => {
+        return init(...args).catch(err => {})
+    },
 }

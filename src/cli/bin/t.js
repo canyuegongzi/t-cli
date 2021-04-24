@@ -11,7 +11,7 @@ program
     .option('-c, --category <category>', '工程类型,[web | server]')
     .option('-t, --template <template>', '模板名称')
     .action((name, options) => {
-        require('../lib/init')(name, options)
+        require('../lib/init').create(name, options).then(r => {})
     })
 
 program

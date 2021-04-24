@@ -89,6 +89,7 @@ typings/
 src
 dist
 /src
+/test
 
 # Gatsby files
 .cache/
