@@ -2,6 +2,15 @@
 
 ## 概述
 
+[该仓库已经迁移](https://github.com/canyuegongzi/web-component-plus/tree/master/packages/web-core-cli)
+
+[该仓库已经迁移](https://github.com/canyuegongzi/web-component-plus/tree/master/packages/web-core-cli)
+
+[该仓库已经迁移](https://github.com/canyuegongzi/web-component-plus/tree/master/packages/web-core-cli)
+
+[该仓库已经迁移](https://github.com/canyuegongzi/web-component-plus/tree/master/packages/web-core-cli)
+
+
 t-cli 是一个前后端通用的快速构建开发环境的脚手架工具。
 
 web端提供 webpack 基础版工程模板（js / ts）、vue2 + webpack(4 / 5)、react + webpack(4 / 5)；node 端默认提供 基础版模板、nest工程级模板等。
